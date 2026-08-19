@@ -1,13 +1,13 @@
 {% set name = "opentelemetry-instrumentation-replicate" %}
-{% set version = "0.57.0" %}
+{% set version = "0.62.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
-  sha256: 95cf6f9e11759e792f2910f486148fee1179c1de7fc2266587ce9223b80b5428
+  sha256: d3e995bd42556ca66956e1e02e24697e15553c3b571fc3135e6f3d661beccd05
 
 build:
   number: 0
@@ -23,8 +23,8 @@ requirements:
     - python
     - opentelemetry-api >=1.38.0,<2.0.0
     - opentelemetry-instrumentation >=0.59b0
-    - opentelemetry-semantic-conventions >=0.59b0
     - opentelemetry-semantic-conventions-ai >=0.5.1,<0.6.0
+    - opentelemetry-semantic-conventions >=0.63b1
   run_constrained:
     - replicate >=0.23.1,<0.27.0
 
